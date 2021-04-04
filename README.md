@@ -1,3 +1,7 @@
+This fork includes a single change to export the `PostOpcodeCompiler` in [`src/js/renderers/mobiledoc/0-3-2.ts`](./src/js/renderers/mobiledoc/0-3-2.ts), to allow for easy MobileDoc compilation, and this explanation.
+
+-----
+
 # Mobiledoc Kit
 
 [![CI Build Status](https://github.com/bustle/mobiledoc-kit/workflows/CI/badge.svg)](https://github.com/bustle/mobiledoc-kit/actions?query=workflow%3ACI)

@@ -52,7 +52,7 @@ const visitor = {
   },
 }
 
-class PostOpcodeCompiler {
+export class PostOpcodeCompiler {
   markupMarkerIds!: number[]
   markers!: MobiledocMarker[]
   sections!: MobiledocSection[]

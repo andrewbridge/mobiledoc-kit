@@ -71,7 +71,7 @@ export type MobiledocAtom = [string, string, {}]
 export type MobiledocCard = [string, {}]
 export type MobiledocMarkerType = [string, string[]?]
 
-class PostOpcodeCompiler {
+export class PostOpcodeCompiler {
   markupMarkerIds!: number[]
   markers!: MobiledocMarker[]
   sections!: MobiledocSection[]

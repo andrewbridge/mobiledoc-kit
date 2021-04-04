@@ -1,7 +1,7 @@
-import MobiledocRenderer_0_2, { MOBILEDOC_VERSION as MOBILEDOC_VERSION_0_2, MobiledocV0_2 } from './0-2'
-import MobiledocRenderer_0_3, { MOBILEDOC_VERSION as MOBILEDOC_VERSION_0_3, MobiledocV0_3 } from './0-3'
-import MobiledocRenderer_0_3_1, { MOBILEDOC_VERSION as MOBILEDOC_VERSION_0_3_1, MobiledocV0_3_1 } from './0-3-1'
-import MobiledocRenderer_0_3_2, { MOBILEDOC_VERSION as MOBILEDOC_VERSION_0_3_2, MobiledocV0_3_2 } from './0-3-2'
+import MobiledocRenderer_0_2, { PostOpcodeCompiler as PostOpcodeCompiler_0_2, MOBILEDOC_VERSION as MOBILEDOC_VERSION_0_2, MobiledocV0_2, PostOpcodeCompiler } from './0-2'
+import MobiledocRenderer_0_3, { PostOpcodeCompiler as PostOpcodeCompiler_0_3, MOBILEDOC_VERSION as MOBILEDOC_VERSION_0_3, MobiledocV0_3 } from './0-3'
+import MobiledocRenderer_0_3_1, { PostOpcodeCompiler as PostOpcodeCompiler_0_3_1, MOBILEDOC_VERSION as MOBILEDOC_VERSION_0_3_1, MobiledocV0_3_1 } from './0-3-1'
+import MobiledocRenderer_0_3_2, { PostOpcodeCompiler as PostOpcodeCompiler_0_3_2, MOBILEDOC_VERSION as MOBILEDOC_VERSION_0_3_2, MobiledocV0_3_2 } from './0-3-2'
 import assert from '../../utils/assert'
 import Post from '../../models/post'
 
@@ -16,6 +16,13 @@ interface VersionTypes {
 }
 
 export type MobiledocVersion = keyof VersionTypes
+
+export const compilers = {
+  [MOBILEDOC_VERSION_0_2]: PostOpcodeCompiler_0_2,
+  [MOBILEDOC_VERSION_0_3]: PostOpcodeCompiler_0_3,
+  [MOBILEDOC_VERSION_0_3_1]: PostOpcodeCompiler_0_3_1,
+  [MOBILEDOC_VERSION_0_3_2]: PostOpcodeCompiler_0_3_2
+};
 
 export default {
   render(post: Post, version: keyof VersionTypes = MOBILEDOC_VERSION_0_3_2): VersionTypes[typeof version] {

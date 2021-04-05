@@ -1,0 +1,23 @@
+declare const _default: {
+    BACKSPACE: string;
+    SPACE: string;
+    ENTER: string;
+    SHIFT: string;
+    ESC: string;
+    DELETE: string;
+    INS: string;
+    HOME: string;
+    END: string;
+    PAGEUP: string;
+    PAGEDOWN: string;
+    CLEAR: string;
+    PAUSE: string;
+    TAB: string;
+    ALT: string;
+    CTRL: string;
+    LEFT: string;
+    RIGHT: string;
+    UP: string;
+    DOWN: string;
+};
+export default _default;

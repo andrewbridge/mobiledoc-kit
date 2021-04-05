@@ -1,6 +1,6 @@
 {
   "name": "@andrewbridge/mobiledoc-kit",
-  "version": "0.13.2",
+  "version": "0.13.3",
   "description": "A toolkit for building WYSIWYG editors with Mobiledoc",
   "repository": "https://github.com/bustle/mobiledoc-kit",
   "module": "dist/mobiledoc.js",
@@ -16,6 +16,7 @@
     "lint": "prettier src/**/*.{js,ts} --check && eslint src/**/*.{js,ts}",
     "format": "prettier src --write",
     "build": "rollup -c",
+    "build:types": "npx tsc src/**/*.ts --declaration --emitDeclarationOnly --outDir types",
     "build:docs": "jsdoc -c ./.jsdoc",
     "build:website": "yarn build:docs && yarn build && ./bin/build-website.sh",
     "deploy:website": "./bin/deploy-website.sh",
@@ -33,7 +34,8 @@
   "files": [
     "dist/mobiledoc.js",
     "dist/mobiledoc.cjs",
-    "dist/mobiledoc.css"
+    "dist/mobiledoc.css",
+    "types/**/*.d.ts"
   ],
   "author": "Garth Poitras <garth22@gmail.com> (http://garthpoitras.com/)",
   "contributors": [

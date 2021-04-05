@@ -1,10 +1,11 @@
 {
   "name": "@andrewbridge/mobiledoc-kit",
-  "version": "0.13.3",
+  "version": "0.13.4",
   "description": "A toolkit for building WYSIWYG editors with Mobiledoc",
   "repository": "https://github.com/bustle/mobiledoc-kit",
   "module": "dist/mobiledoc.js",
   "main": "dist/mobiledoc.cjs",
+  "types": "types/index.d.ts",
   "exports": {
     "import": "./dist/mobiledoc.js",
     "require": "./dist/mobiledoc.cjs"
